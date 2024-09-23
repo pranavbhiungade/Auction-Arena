@@ -1,0 +1,30 @@
+version: '3'
+
+services:
+  frontend:
+    build:
+      context: /auctionArena-frontend
+      dockerfile: Dockerfile
+    image: bplan-frontend:dev  # Name for the frontend container
+    ports:
+      - "3001:3001"  
+    depends_on:
+      - backend  # Ensure the backend is running before the frontend
+    networks:
+      - app-network
+
+  backend:
+    build:
+      context: /AuctionArena
+      dockerfile: Dockerfile
+    image: bplan-backend:dev  # Name for the backend container
+    ports:
+      - "3000:3000"  
+    env_file:
+      - .env
+    networks:
+      - app-network
+
+networks:
+  app-network:
+    driver: bridge

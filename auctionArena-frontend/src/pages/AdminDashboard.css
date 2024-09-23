@@ -1,0 +1,8 @@
+/* AdminDashboard.css */
+
+.hover-effect:hover {
+    background-color: #e2e6ea; /* Light gray background on hover */
+    color: #495057; /* Darker text color on hover */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition */
+  }
+  
