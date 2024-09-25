@@ -25,7 +25,7 @@ const AllTeams = () => {
         console.log(userId);
 
         // Fetch user team data
-        const userTeamResponse = await axios.get(`http://localhost:3000/teams/team/getTeamData/${userId}`, {
+        const userTeamResponse = await axios.get(`http://20.197.36.224:3000/teams/team/getTeamData/${userId}`, {
           headers: { Authorization: `Bearer ${token}` }
         });
 
@@ -34,7 +34,7 @@ const AllTeams = () => {
 
 
         // Fetch all teams data
-        const allTeamsResponse = await axios.get('http://localhost:3000/teams/team/getAllTeamsData', {
+        const allTeamsResponse = await axios.get('http://20.197.36.224:3000/teams/team/getAllTeamsData', {
           headers: { Authorization: `Bearer ${token}` }
         });
 

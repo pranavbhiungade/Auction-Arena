@@ -26,7 +26,7 @@ const CreateCompanyForm = () => {
           },
         };
         const response = await axios.get(
-          "http://localhost:3000/domain/getAllDomains",
+          "http://20.197.36.224:3000/domain/getAllDomains",
           config
         );
         setDomains(response.data);
@@ -61,7 +61,7 @@ const CreateCompanyForm = () => {
         },
       };
       const response = await axios.post(
-        "http://localhost:3000/company/createCompany",
+        "http://20.197.36.224:3000/company/createCompany",
         formData,
         config
       );

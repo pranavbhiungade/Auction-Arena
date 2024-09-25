@@ -30,7 +30,7 @@ const CreateDomainForm = () => {
         },
       };
       const response = await axios.post(
-        "http://localhost:3000/domain/createDomain",
+        "http://20.197.36.224:3000/domain/createDomain",
         formData,
         config
       );

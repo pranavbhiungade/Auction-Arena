@@ -18,7 +18,7 @@ const Companies = () => {
         };
 
         const response = await axios.get(
-          "http://localhost:3000/company/getAllCompanies",
+          "http://20.197.36.224:3000/company/getAllCompanies",
           config
         );
         setCompanies(response.data.companies);

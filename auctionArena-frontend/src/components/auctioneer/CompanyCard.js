@@ -21,7 +21,7 @@ const CompanyCard = () => {
         };
 
         const response = await axios.get(
-          "http://localhost:3000/company/getAllCompanies",
+          "http://20.197.36.224:3000/company/getAllCompanies",
           config
         );
         setCompanies(response.data.companies);
@@ -43,7 +43,7 @@ const CompanyCard = () => {
         };
 
         const response = await axios.get(
-          "http://localhost:3000/teams/team/getAllTeamsData",
+          "http://20.197.36.224:3000/teams/team/getAllTeamsData",
           config
         ); // Adjust endpoint URL as per your backend
         setTeams(response.data.teams);
@@ -86,7 +86,7 @@ const CompanyCard = () => {
 
       const currentCompany = companies[currentIndex];
       const response = await axios.put(
-        "http://localhost:3000/company/sellCompany",
+        "http://20.197.36.224:3000/company/sellCompany",
         { companyId: currentCompany._id, teamId: selectedTeam, soldAt },
         config
       );

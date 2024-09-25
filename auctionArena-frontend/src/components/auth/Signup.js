@@ -20,7 +20,7 @@ const Signup = () => {
 
     try {
       const response = await axios.post(
-        "http://localhost:3000/teams/team/register",
+        "http://20.197.36.224:3000/teams/team/register",
         {
           name: teamName, // Ensure backend expects 'name' instead of 'teamName'
           password,

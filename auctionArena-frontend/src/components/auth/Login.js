@@ -15,7 +15,7 @@ const Login = ({ setIsLoggedIn, setUserRole }) => {
     e.preventDefault();
     try {
       const response = await axios.post(
-        "http://localhost:3000/teams/team/login",
+        "http://20.197.36.224:3000/teams/team/login",
         {
           name: teamName,
           password,
