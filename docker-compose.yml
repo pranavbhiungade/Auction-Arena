@@ -3,7 +3,7 @@ version: '3'
 services:
   frontend:
     build:
-      context: /auctionArena-frontend
+      context: ./auctionArena-frontend
       dockerfile: Dockerfile
     image: bplan-frontend:dev  # Name for the frontend container
     ports:
@@ -15,7 +15,7 @@ services:
 
   backend:
     build:
-      context: /AuctionArena
+      context: ./AuctionArena
       dockerfile: Dockerfile
     image: bplan-backend:dev  # Name for the backend container
     ports:
