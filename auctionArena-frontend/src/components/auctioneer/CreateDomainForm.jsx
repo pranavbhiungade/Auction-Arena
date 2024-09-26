@@ -20,7 +20,8 @@ const CreateDomainForm = () => {
     e.preventDefault();
     setShowModal(true);
   };
-
+  
+const BACKEND_URL = process.env.BACKEND_URL;
   const handleConfirm = async () => {
     try {
       const token = localStorage.getItem("token"); // Get token from localStorage
@@ -30,7 +31,7 @@ const CreateDomainForm = () => {
         },
       };
       const response = await axios.post(
-        "http://20.197.36.224:3000/domain/createDomain",
+        `${BACKEND_URL}3000/domain/createDomain`,
         formData,
         config
       );

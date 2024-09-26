@@ -15,6 +15,8 @@ const CreateCompanyForm = () => {
   const [domains, setDomains] = useState([]);
   const [showModal, setShowModal] = useState(false);
 
+  const BACKEND_URL = process.env.BACKEND_URL;
+
   useEffect(() => {
     // Fetch the domains from the backend when the component mounts
     const fetchDomains = async () => {
@@ -26,7 +28,7 @@ const CreateCompanyForm = () => {
           },
         };
         const response = await axios.get(
-          "http://20.197.36.224:3000/domain/getAllDomains",
+          `${BACKEND_URL}3000/domain/getAllDomains`,
           config
         );
         setDomains(response.data);
@@ -61,7 +63,7 @@ const CreateCompanyForm = () => {
         },
       };
       const response = await axios.post(
-        "http://20.197.36.224:3000/company/createCompany",
+        `${BACKEND_URL}3000/company/createCompany`,
         formData,
         config
       );

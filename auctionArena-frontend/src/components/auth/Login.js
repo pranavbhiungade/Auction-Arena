@@ -11,11 +11,13 @@ const Login = ({ setIsLoggedIn, setUserRole }) => {
   const [error, setError] = useState("");
   const navigate = useNavigate();
 
+  const BACKEND_URL = process.env.BACKEND_URL;
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
       const response = await axios.post(
-        "http://20.197.36.224:3000/teams/team/login",
+        `${BACKEND_URL}3000/teams/team/login`,
         {
           name: teamName,
           password,

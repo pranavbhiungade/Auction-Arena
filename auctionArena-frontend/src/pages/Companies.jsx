@@ -7,6 +7,8 @@ const Companies = () => {
   const [companies, setCompanies] = useState([]);
   const [loading, setLoading] = useState(true);
 
+  const BACKEND_URL = process.env.BACKEND_URL;
+
   useEffect(() => {
     const fetchCompanies = async () => {
       try {
@@ -18,7 +20,7 @@ const Companies = () => {
         };
 
         const response = await axios.get(
-          "http://20.197.36.224:3000/company/getAllCompanies",
+          `${BACKEND_URL}3000/company/getAllCompanies`,
           config
         );
         setCompanies(response.data.companies);

@@ -11,6 +11,8 @@ const Signup = () => {
   const [error, setError] = useState("");
   const navigate = useNavigate();
 
+  const BACKEND_URL = process.env.BACKEND_URL;
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     if (password !== confirmPassword) {
@@ -20,7 +22,7 @@ const Signup = () => {
 
     try {
       const response = await axios.post(
-        "http://20.197.36.224:3000/teams/team/register",
+        `${BACKEND_URL}3000/teams/team/register`,
         {
           name: teamName, // Ensure backend expects 'name' instead of 'teamName'
           password,

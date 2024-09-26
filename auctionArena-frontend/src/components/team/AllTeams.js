@@ -11,6 +11,8 @@ const AllTeams = () => {
   const [otherTeams, setOtherTeams] = useState([]);
   const [loading, setLoading] = useState(true);
 
+  const BACKEND_URL = process.env.BACKEND_URL;
+
   useEffect(() => {
     const fetchTeamData = async () => {
       try {
@@ -25,7 +27,7 @@ const AllTeams = () => {
         console.log(userId);
 
         // Fetch user team data
-        const userTeamResponse = await axios.get(`http://20.197.36.224:3000/teams/team/getTeamData/${userId}`, {
+        const userTeamResponse = await axios.get(`${BACKEND_URL}3000/teams/team/getTeamData/${userId}`, {
           headers: { Authorization: `Bearer ${token}` }
         });
 
@@ -34,7 +36,7 @@ const AllTeams = () => {
 
 
         // Fetch all teams data
-        const allTeamsResponse = await axios.get('http://20.197.36.224:3000/teams/team/getAllTeamsData', {
+        const allTeamsResponse = await axios.get(`${BACKEND_URL}3000/teams/team/getAllTeamsData`, {
           headers: { Authorization: `Bearer ${token}` }
         });
 

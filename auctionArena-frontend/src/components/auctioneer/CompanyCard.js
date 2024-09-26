@@ -9,6 +9,7 @@ const CompanyCard = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [selectedTeam, setSelectedTeam] = useState("");
   const [soldAt, setSoldAt] = useState("");
+  const BACKEND_URL = process.env.BACKEND_URL;
 
   useEffect(() => {
     const fetchCompanies = async () => {
@@ -21,7 +22,7 @@ const CompanyCard = () => {
         };
 
         const response = await axios.get(
-          "http://20.197.36.224:3000/company/getAllCompanies",
+          `${BACKEND_URL}3000/company/getAllCompanies`,
           config
         );
         setCompanies(response.data.companies);
@@ -43,7 +44,7 @@ const CompanyCard = () => {
         };
 
         const response = await axios.get(
-          "http://20.197.36.224:3000/teams/team/getAllTeamsData",
+          `${BACKEND_URL}3000/teams/team/getAllTeamsData`,
           config
         ); // Adjust endpoint URL as per your backend
         setTeams(response.data.teams);
@@ -86,7 +87,7 @@ const CompanyCard = () => {
 
       const currentCompany = companies[currentIndex];
       const response = await axios.put(
-        "http://20.197.36.224:3000/company/sellCompany",
+        `${BACKEND_URL}3000/company/sellCompany`,
         { companyId: currentCompany._id, teamId: selectedTeam, soldAt },
         config
       );
