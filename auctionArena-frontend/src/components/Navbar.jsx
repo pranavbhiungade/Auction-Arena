@@ -32,11 +32,11 @@ const Navbar = ({ isLoggedIn, userRole, handleLogout, setIsLoggedIn }) => {
                 About
               </NavLink>
             </li>
-            {/* <li className="nav-item">
+            <li className="nav-item">
               <NavLink className="nav-link" to="/contact">
                 Contact Us
               </NavLink>
-            </li> */}
+            </li>
             <li className="nav-item">
               <NavLink className="nav-link" to="/rules">
                 Rulebook
