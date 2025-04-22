@@ -14,10 +14,10 @@ const ContactSection = () => {
                     <div className="card contact-card mt-2">
                         <img
                             src="https://tmssl.akamaized.net/images/foto/galerie/neymar-brazil-2022-1668947300-97010.jpg?lm=1668947335"
-                            alt="Pranav Bhiungade"
+                            alt="Mitali"
                             className="profile-img"
                         />
-                        <div className="card-header">Pranav Bhiungade</div>
+                        <div className="card-header">Mitali Umbarje</div>
                         <div className="card-body">
                             <p className="card-text">Phone: +91 82620 56084</p>
                         </div>
@@ -28,10 +28,10 @@ const ContactSection = () => {
                     <div className="card contact-card mt-2">
                         <img
                             src="https://tmssl.akamaized.net/images/foto/galerie/neymar-brazil-2022-1668947300-97010.jpg?lm=1668947335"
-                            alt="Prem Deshmukh"
+                            alt="Vedika"
                             className="profile-img"
                         />
-                        <div className="card-header">Prem Deshmukh</div>
+                        <div className="card-header">Vedika Thakur </div>
                         <div className="card-body">
                             <p className="card-text">Phone: +91 70204 04591</p>
                         </div>
@@ -42,10 +42,10 @@ const ContactSection = () => {
                     <div className="card contact-card mt-2">
                         <img
                             src="https://tmssl.akamaized.net/images/foto/galerie/neymar-brazil-2022-1668947300-97010.jpg?lm=1668947335"
-                            alt="Vishal Bhokre"
+                            alt="Avantika Phalke"
                             className="profile-img"
                         />
-                        <div className="card-header">Vishal Bhokre</div>
+                        <div className="card-header">Avantika Phalke</div>
                         <div className="card-body">
                             <p className="card-text">Phone: +91 99220 45868</p>
                         </div>
